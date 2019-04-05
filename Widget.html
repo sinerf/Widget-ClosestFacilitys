@@ -1,0 +1,87 @@
+<div>
+	<div>
+	  <div>
+	  ¿Preparado para explorar Calp a tu gusto? ¡Esta app te guiará a tu nueva aventura! ¡Cuéntanos! ¿Tienes algún interés en particular?
+	  </div>
+	  <div class="contenedorBotonesFiltros">
+	    <button id="Costa" type="button" class="botonFiltro" data-dojo-attach-point="botonFiltrarLitoral" data-dojo-attach-event="onclick:_onClickLitoral">Costa/Paseo Maritimo</button>
+	    <button id="Montaña" type="button" class="botonFiltro" data-dojo-attach-point="botonFiltrarMontaña" data-dojo-attach-event="onclick:_onClickMontaña">Montaña/Senderismo</button>
+	    <button id="Historica" type="button" class="botonFiltro" data-dojo-attach-point="botonFiltrarHistorica" data-dojo-attach-event="onclick:_onClickHistorica">História/Cultura</button>
+	  </div>
+		<div class="">
+			<tr>
+					<td class="Como">¿Dónde empezar tu aventura?</td>
+					<td>
+							<select id="modoDeViaje">
+									<option value="1">inicio de ruta</option>
+									<option value="2" selected="selected">parada más proxima de la ruta</option>
+							</select>
+					</td>
+			</tr>
+		</div>
+	</div>
+	<div>
+		<div>Calcula tu ubicacion actual o escribe una dirección:	</div>
+		<div id="LocateButton"></div>
+
+		<div id="search"></div>
+		<table>
+	        <tr>
+	            <td class="col1">Dibuja desde dónde empezarás:</td>
+	            <td>
+	                <img id="btnDrawEvent" src="widgets/ClosestFacility/images/w_addstart.png" title="Add incidents to be allocated to nearby facilities"
+	                    width="20" height="20" style="vertical-align:middle; cursor:pointer;"/>
+	                <!-- <img id="btnDrawBarrier" src="widgets/ClosestFacility/images/i_draw_line.png" title="Draw a traffic barrier (one click per vertex; double-click to stop)"
+	                    width="20" height="20" style="vertical-align:middle; cursor:pointer;"/> -->
+	            </td>
+	        </tr>
+	        <tr>
+	            <td class="col1">¿Cuántas rutas quieres calcular?</td>
+	            <td>
+	                <select id="numFacilities">
+	                    <option value="1" selected="selected">1</option>
+	                    <option value="2">2</option>
+	                    <option value="3">3</option>
+	                    <!-- <option value="4">4</option> -->
+	                </select>
+	            </td>
+	        </tr>
+
+	        <tr>
+	            <td class="col1">
+	                <input type="checkbox" id="chkLimitTravelTime" style="vertical-align:middle;"/>
+	                <label for="chkLimitTravelTime" title="Check to limit the travel time allowed in the solution">Tiempo de viaje máximo (minutos):</label>
+	            </td>
+	            <td><input id="numMaxTravelTime" disabled="disabled" type="number" value="10" step="5" min="5" max="300"
+	                    onfocus="this.oldValue = this.value;"/></td>
+	        </tr>
+
+	        <tr>
+	            <!-- <td class="col1" style="vertical-align:bottom;">Result Rank Symbols:</td>
+	            <td>
+	                <table>
+	                    <tr id="trRankNumbers" style="horizonal-align:middle;">
+	                    </tr>
+
+	                    <tr id="trRankColors">
+	                    </tr>
+	                </table>
+	            </td> -->
+	        </tr>
+
+	        <tr>
+	            <td class="col1">
+	                <button id="btnSolve" disabled="disabled" style="vertical-align:middle;" title="Solve and display the results">Resolver</button>
+	                <div id="busyIndicator" style="vertical-align:middle; visibility:visible; display:inline-block; height:50px; width:50px;"></div>
+	            </td>
+	            <td>
+	                <button id="btnClear" title="Clear all events, barriers, and results">Limpiar</button>
+	            </td>
+	        </tr>
+
+	    </table>
+
+	</div>
+	<hr>
+	<div id="directionsDiv">	</div>
+</div>

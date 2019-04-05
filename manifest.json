@@ -1,0 +1,24 @@
+{
+  "name": "ClosestFacility",
+  "2D": true,
+  "3D": false,
+  "platform": "HTML",
+  "version": "1.3",
+  "wabVersion": "1.3",
+  "author": "Ricardo Andrés Puentes Vallejo",
+  "description": "Custom Facilities Network Analysis",
+  "copyright": "",
+  "license": "http://www.apache.org/licenses/LICENSE-2.0",
+  "properties": {
+		"inPanel":true,
+		"hasLocale": false,
+		"hasStyle":true,
+		"hasConfig":true,
+		"hasUIFile":true,
+		"hasSettingPage":true,
+		"hasSettingUIFile":true,
+		"hasSettingLocale":false,
+		"hasSettingStyle":true,
+		"IsController":false
+  }
+}
